@@ -1,0 +1,80 @@
+.tab-head {
+  position: absolute;
+  height: 20%;
+  width: 100%;
+}
+
+.tab-content {
+  margin: 10px;
+}
+
+.tab-link {
+  color: #5865f2;
+  border: none;
+  height: 2.4rem;
+  width: 100%;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab-link-active {
+  box-sizing: content-box;
+  border-bottom: 3px solid #5865f2;
+}
+
+.tab-ul {
+  position: absolute;
+  height: 83%;
+  top: 16%;
+  width: 98%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  left: 50%;
+}
+
+/* .tab-ul-in {
+  position: relative;
+} */
+
+.ul-out {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 98%;
+  height: 98%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+
+.tabul {
+  list-style-type: none;
+  min-height: 100%;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+}
+
+.ulcenter {
+  color: gray;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}

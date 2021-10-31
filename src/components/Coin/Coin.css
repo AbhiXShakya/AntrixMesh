@@ -1,0 +1,39 @@
+.coin-container,
+.coin-row,
+.coin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-container *,
+.coin-row *,
+.coin * {
+  margin: 0;
+}
+
+.coin * {
+  margin-top: 3px;
+  margin-left: 4px;
+}
+
+.coin {
+  margin-right: 10px;
+}
+
+.coin img {
+  background-color: white;
+  border-radius: 25px;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.coin h1 {
+  font-size: 14px;
+  color: white;
+}
+
+.coin p {
+  font-size: 14px;
+  font-weight: 500;
+}

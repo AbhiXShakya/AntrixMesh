@@ -1,0 +1,56 @@
+.g-signin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 6vh;
+  border-radius: 15px;
+  padding-top: 3rem !important;
+  padding: 4rem;
+  background-color: white;
+  max-width: 40%;
+}
+
+p {
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 16;
+  background-color: rgba(0, 0, 0, 0.349);
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 600px) {
+  .card {
+    position: relative;
+    top: -5%;
+    max-width: 86% !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    max-width: 50%;
+  }
+}

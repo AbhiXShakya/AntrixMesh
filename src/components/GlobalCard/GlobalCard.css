@@ -1,0 +1,131 @@
+.card-h2 {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: 3px underline #5865f2;
+  text-transform: capitalize;
+  color: #e6dbc9;
+}
+
+.filters {
+  display: flex;
+  background-color: #23272a;
+  padding: 8px 12px;
+  margin: 4px 10px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.country-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 50rem;
+  -webkit-border-radius: 50rem;
+  -moz-border-radius: 50rem;
+  -ms-border-radius: 50rem;
+  -o-border-radius: 50rem;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.country-select img:hover {
+  background-color: #5865f294;
+}
+
+.country-select img {
+  margin: 0 0 0 0;
+  background-color: transparent;
+}
+
+.filters input[type="text"] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  margin: 0 0 0 6px;
+  width: 100%;
+}
+
+.datensearch input[type="date"] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  width: 2.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+}
+
+#fromDate:nth-child(2),
+#toDate:nth-child(4) {
+  margin-left: -1.6rem;
+}
+
+#fromDate,
+#toDate {
+  margin-right: 0.6rem;
+}
+
+.datensearch input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.datensearch input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.datelabel {
+  user-select: none;
+  padding: 0 3px;
+  font-size: 12px;
+  color: rgb(180, 180, 180);
+  transform: translateY(18%);
+  -webkit-transform: translateY(18%);
+  -moz-transform: translateY(18%);
+  -ms-transform: translateY(18%);
+  -o-transform: translateY(18%);
+  z-index: 4;
+  background-color: #23272a;
+}
+
+#filter-btn {
+  cursor: pointer;
+  background-color: #5865f2;
+  clip-path: circle(50% at 50% 50%);
+  color: white;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+#filter-btn * {
+  font-size: 20px;
+}
+
+.datensearch {
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+}
+
+.dateactive {
+  color: #5865f2;
+}

@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  /* background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(123, 43, 204, 1) 0%,
+    rgba(32, 25, 158, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(123, 43, 204, 1) 0%,
+    rgba(32, 25, 158, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(123, 43, 204, 1) 0%,
+    rgba(32, 25, 158, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#20199e",GradientType=1); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  /* -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+  /* overflow-y: hidden; */
+}
+
+*:focus {
+  outline: none !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  outline: none !important;
+  box-shadow: none;
+  scrollbar-width: auto;
+  scrollbar-color: #5865f2 black;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2c2f33;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5865f2;
+  border-radius: 90px;
+  border: 1px solid #2c2f33;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  -ms-border-radius: 90px;
+  -o-border-radius: 90px;
+}
+
+a {
+  color: #e6dbc9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

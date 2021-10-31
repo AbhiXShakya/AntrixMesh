@@ -1,0 +1,54 @@
+{
+  "name": "crypto-map",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.10",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/lab": "^5.0.0-alpha.48",
+    "@mui/material": "^5.0.1",
+    "@react-leaflet/core": ">=1.0.0 <1.1.0 || ^1.1.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@widgetbot/react-embed": "^1.4.0",
+    "axios": "^0.23.0",
+    "country-iso-3-to-2": "^1.1.0",
+    "country-js": "^0.0.9",
+    "country-reverse-geocoding": "^0.2.2",
+    "framer-motion": "^4",
+    "geo-reverse": "^1.0.13",
+    "heatmap.js": "^2.0.5",
+    "leaflet": "^1.7.1",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-google-login": "^5.2.2",
+    "react-icons": "^4.3.1",
+    "react-leaflet": ">=3.1.0 <3.2.0 || ^3.2.1",
+    "react-paginate": "^7.1.5",
+    "react-scripts": "4.0.3",
+    "react-swipeable-views": "^0.14.0",
+    "react-tabs-redux": "^4.0.0",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
