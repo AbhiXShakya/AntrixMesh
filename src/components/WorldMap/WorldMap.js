@@ -6,7 +6,6 @@ import { MdOutlineAdd, AiOutlineMinus } from "react-icons/all";
 import crg from "country-reverse-geocoding";
 import axios from "axios";
 import n from "country-js";
-import Discussion from "../Discussion/Discussion";
 import MapOnClickCard from "../MapOnClickCard/MapOnClickCard";
 import GlobalCard from "../GlobalCard/GlobalCard";
 import CircularButton from "../CircularButton/CircularButton";
@@ -43,7 +42,6 @@ export function WorldMap({ authlogin }) {
 
   const toggleDiscusionHandler = () => {
     setToggleDiscussion(!toggleDiscussion);
-    console.log(toggleDiscussion);
   };
 
   const loadheat = (map) => {
@@ -59,9 +57,7 @@ export function WorldMap({ authlogin }) {
               lng: ltng?.longitude,
               count: value,
             });
-          } catch (err) {
-            console.log(err.message);
-          }
+          } catch (err) {}
         }
         let testData = {
           max: 10,
@@ -69,13 +65,10 @@ export function WorldMap({ authlogin }) {
         };
         let heatmapLayer = new HeatmapOverlay(cfg);
         heatmapLayer.setData(testData);
-        console.log("---------------");
-        console.log(heatPoints);
+
         map.addLayer(heatmapLayer);
       })
-      .catch((err) => {
-        console.log(err.message);
-      });
+      .catch((err) => {});
   };
 
   useEffect(() => {
@@ -111,13 +104,10 @@ export function WorldMap({ authlogin }) {
         countryData = crg
           .country_reverse_geocoding()
           .get_country(e.latlng.lat, e.latlng.lng);
-      } catch (error) {
-        console.log(error, "error in getting country");
-      }
+      } catch (error) {}
       if (countryData && countryData?.name && countryData?.code) {
         setMapSelectedCountry(countryData);
         toggleMapOnClick();
-        console.log(map);
       }
     });
 
@@ -154,11 +144,6 @@ export function WorldMap({ authlogin }) {
           setSelectedCountry={setSelectedCountry}
         />
       ) : null}
-
-      <Discussion
-        toggleDiscussion={toggleDiscussion}
-        toggleDiscusionHandler={toggleDiscusionHandler}
-      />
 
       <div className="btn-container">
         <div

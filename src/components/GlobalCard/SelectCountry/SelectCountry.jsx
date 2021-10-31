@@ -8,7 +8,6 @@ export default function SelectCountry({
   setCountryIcon,
 }) {
   const liOnClick = (option) => {
-    console.log(option);
     let countryCode;
     if (option.code === "global") {
       countryCode = undefined;

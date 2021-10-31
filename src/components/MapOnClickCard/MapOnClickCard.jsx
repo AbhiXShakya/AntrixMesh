@@ -46,7 +46,6 @@ export default function MapOnClickCard({
 
   const countrySubmit = (type) => {
     let countryCode = getCountryISO2(mapSelectedCountry.code);
-
     let fetchUrl;
 
     if (type === "crypto") {
@@ -73,7 +72,9 @@ export default function MapOnClickCard({
         } else if (type === "docs") {
           setGetDocsCountryObj(res.data);
         }
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 900);
       })
       .catch((error) => console.log(error));
   };
@@ -112,7 +113,7 @@ export default function MapOnClickCard({
   const handleCountryDocsPageClick = (data) => {
     setCurrentDocsPage(data.selected + 1);
   };
-  console.log(currentCryptoPage);
+
   return (
     <>
       <PopCard toggleCard={toggleMapOnClick}>
@@ -133,7 +134,7 @@ export default function MapOnClickCard({
                 <ul className="tabul">
                   {isLoading ? (
                     <Loader />
-                  ) : cryptoCollections?.["crypto"]?.length ? (
+                  ) : cryptoCollections?.["crypto"] ? (
                     cryptoCollections?.["crypto"]?.map((e) => {
                       return (
                         <li key={e._id}>

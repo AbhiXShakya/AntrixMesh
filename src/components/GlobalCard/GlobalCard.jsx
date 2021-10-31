@@ -85,7 +85,6 @@ export default function GlobalCard({
       }&page=${currDocsPage}&limit=10`;
     }
 
-    console.log(fetchurl);
     axios
       .get(fetchurl)
       .then((res) => {
@@ -94,7 +93,9 @@ export default function GlobalCard({
           : type === "legal"
           ? setGetLegalFilterObj(res.data)
           : setGetDocsFilterObj(res.data);
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 900);
       })
       .catch((error) => console.log(error));
   };
@@ -135,19 +136,14 @@ export default function GlobalCard({
   const docsPageCount = Math.ceil(getDocsFilterObj?.totalResults / 10);
 
   const handleCryptoPageClick = (data) => {
-    console.log(data.selected);
     setCurrCryptoPage(data.selected + 1);
   };
   const handleLegalPageClick = (data) => {
-    console.log(data.selected);
     setCurrLegalPage(data.selected + 1);
   };
   const handleDocsPageClick = (data) => {
-    console.log(data.selected);
     setCurrDocsPage(data.selected + 1);
   };
-
-  console.log(getCryptoFilterObj);
 
   return (
     <PopCard toggleCard={toggleGlobalCard}>
@@ -176,7 +172,6 @@ export default function GlobalCard({
           <span className="datelabel">From:</span>
           <input
             onChange={(e) => {
-              console.log(e.target.value);
               setFromDate(e.target.value);
               toggleDateActive(e.target.value, "fromDate");
             }}
@@ -188,7 +183,6 @@ export default function GlobalCard({
           <span className="datelabel">To:</span>
           <input
             onChange={(e) => {
-              console.log(e.target.value);
               setToDate(e.target.value);
               toggleDateActive(e.target.value, "toDate");
             }}
