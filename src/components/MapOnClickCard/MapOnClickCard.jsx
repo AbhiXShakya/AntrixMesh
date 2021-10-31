@@ -184,51 +184,52 @@ export default function MapOnClickCard({
               ) : null}
             </TabContent>
             <TabContent for="tab2">
-              {" "}
-              <ul className="tabul">
-                {isLoading ? (
-                  <Loader />
-                ) : legalCollections?.["legal"]?.length ? (
-                  legalCollections?.["legal"]?.map((e) => {
-                    return (
-                      <li key={e._id}>
-                        <div className="result">
-                          <a
-                            href={e.link}
-                            className="result-header"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <span className="result-title">
-                              <img
-                                alt="🌐"
-                                className="result-icon"
-                                src={
-                                  e.linkIcon
-                                    ? e.linkIcon
-                                    : "https://cointelegraph.com/favicon.ico"
-                                }
-                                loading="lazy"
-                                width="32"
-                                height="20"
-                              />
-                              &nbsp;&nbsp;{e.title}
+              <div className="ul-out">
+                <ul className="tabul">
+                  {isLoading ? (
+                    <Loader />
+                  ) : legalCollections?.["legal"]?.length ? (
+                    legalCollections?.["legal"]?.map((e) => {
+                      return (
+                        <li key={e._id}>
+                          <div className="result">
+                            <a
+                              href={e.link}
+                              className="result-header"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span className="result-title">
+                                <img
+                                  alt="🌐"
+                                  className="result-icon"
+                                  src={
+                                    e.linkIcon
+                                      ? e.linkIcon
+                                      : "https://cointelegraph.com/favicon.ico"
+                                  }
+                                  loading="lazy"
+                                  width="32"
+                                  height="20"
+                                />
+                                &nbsp;&nbsp;{e.title}
+                              </span>
+                              <br />
+                            </a>
+                            <span className="result-site">
+                              {new URL(e.link).hostname.replace("www.", "")}
                             </span>
                             <br />
-                          </a>
-                          <span className="result-site">
-                            {new URL(e.link).hostname.replace("www.", "")}
-                          </span>
-                          <br />
-                          <span className="result-desc">{e.linkDesc}</span>
-                        </div>
-                      </li>
-                    );
-                  })
-                ) : (
-                  <p className="ulcenter">No data found</p>
-                )}
-              </ul>
+                            <span className="result-desc">{e.linkDesc}</span>
+                          </div>
+                        </li>
+                      );
+                    })
+                  ) : (
+                    <p className="ulcenter">No data found</p>
+                  )}
+                </ul>
+              </div>
               {countryLegalPageCount > 1 ? (
                 <Pagination
                   pageCount={countryLegalPageCount}
@@ -237,50 +238,52 @@ export default function MapOnClickCard({
               ) : null}
             </TabContent>
             <TabContent for="tab3">
-              <ul className="tabul">
-                {isLoading ? (
-                  <Loader />
-                ) : docsCollections?.["govtdocs]"]?.length ? (
-                  docsCollections?.["govtdocs"]?.map((e) => {
-                    return (
-                      <li key={e._id}>
-                        <div className="result">
-                          <a
-                            href={e.link}
-                            className="result-header"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <span className="result-title">
-                              <img
-                                alt="🌐"
-                                className="result-icon"
-                                src={
-                                  e.linkIcon
-                                    ? e.linkIcon
-                                    : "https://cointelegraph.com/favicon.ico"
-                                }
-                                loading="lazy"
-                                width="32"
-                                height="20"
-                              />
-                              &nbsp;&nbsp;{e.title}
+              <div className="ul-out">
+                <ul className="tabul">
+                  {isLoading ? (
+                    <Loader />
+                  ) : docsCollections?.["govtdocs]"]?.length ? (
+                    docsCollections?.["govtdocs"]?.map((e) => {
+                      return (
+                        <li key={e._id}>
+                          <div className="result">
+                            <a
+                              href={e.link}
+                              className="result-header"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span className="result-title">
+                                <img
+                                  alt="🌐"
+                                  className="result-icon"
+                                  src={
+                                    e.linkIcon
+                                      ? e.linkIcon
+                                      : "https://cointelegraph.com/favicon.ico"
+                                  }
+                                  loading="lazy"
+                                  width="32"
+                                  height="20"
+                                />
+                                &nbsp;&nbsp;{e.title}
+                              </span>
+                              <br />
+                            </a>
+                            <span className="result-site">
+                              {new URL(e.link).hostname.replace("www.", "")}
                             </span>
                             <br />
-                          </a>
-                          <span className="result-site">
-                            {new URL(e.link).hostname.replace("www.", "")}
-                          </span>
-                          <br />
-                          <span className="result-desc">{e.linkDesc}</span>
-                        </div>
-                      </li>
-                    );
-                  })
-                ) : (
-                  <p className="ulcenter">No data found</p>
-                )}
-              </ul>
+                            <span className="result-desc">{e.linkDesc}</span>
+                          </div>
+                        </li>
+                      );
+                    })
+                  ) : (
+                    <p className="ulcenter">No data found</p>
+                  )}
+                </ul>
+              </div>
               {countryDocsPageCount > 1 ? (
                 <Pagination
                   pageCount={countryDocsPageCount}
