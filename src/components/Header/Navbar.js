@@ -11,9 +11,10 @@ function Navbar({ onSignout, userinfo, authlogin }) {
   const [ProfileCard, setProfileCard] = useState(false);
   const [pageClicked, setPageClicked] = useState(undefined);
   const [togglePage, setTogglePage] = useState(false);
+
   const displayPage = (page) => {
-    setPageClicked(page);
     setTogglePage(!togglePage);
+    setPageClicked(page);
   };
 
   const pageHandler = () => {
@@ -39,7 +40,7 @@ function Navbar({ onSignout, userinfo, authlogin }) {
       ) : null}
       <div className="nav-container">
         <nav>
-          <h2>CryptoMap</h2>
+          <h2>AntrixMesh</h2>
           <div className="nav-sub-container">
             <input id="navcheck" type="checkbox" />
             <label htmlFor="navcheck" className="nav-btn">

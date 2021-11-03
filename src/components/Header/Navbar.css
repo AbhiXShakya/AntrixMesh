@@ -1,7 +1,6 @@
 .nav-container {
   margin: 10px 10px 10px 10px;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  /* background-color: white; */
   border-radius: 15px;
   position: relative;
   z-index: 3;
@@ -69,6 +68,7 @@ nav ul {
 
 nav li {
   margin-left: 20px;
+  font-weight: 500;
 }
 
 #navcheck:checked ~ ul {

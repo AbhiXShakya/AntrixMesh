@@ -38,3 +38,104 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Donation Page */
+
+.qr-container {
+  margin-top: 0rem;
+  background-color: white;
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.qr-container img {
+  height: 90%;
+  width: 90%;
+}
+
+.coin-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.coin-address {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-address p {
+  margin: 6px;
+}
+
+.copy-address {
+  cursor: pointer;
+  background-color: #3b4af03a;
+  padding: 0.4rem 10px;
+  border-radius: 8px;
+  border: 2px solid #3b4af0b9;
+  color: white;
+  font-size: 1rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  text-align: center;
+}
+
+@media screen and (max-width: 460px) {
+  .copy-address {
+    width: 300px;
+    overflow: hidden;
+  }
+
+  .qr-container {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+.donate-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.donate-tabs button {
+  height: 3.4rem;
+}
+
+.tab-link img {
+  margin: 8px 0;
+  background-color: white;
+  padding: 4px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
