@@ -2,12 +2,24 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { GoogleLogout } from "react-google-login";
 import CryptoBanner from "../CryptoBanner/CryptoBanner";
+import { Pages } from "../Pages/Pages";
 
 const clientId =
   "666743102967-humikr8ibktjr2oeeb3pmldbdf9qmvol.apps.googleusercontent.com";
 
 function Navbar({ onSignout, userinfo, authlogin }) {
   const [ProfileCard, setProfileCard] = useState(false);
+  const [pageClicked, setPageClicked] = useState(undefined);
+  const [togglePage, setTogglePage] = useState(false);
+  const displayPage = (page) => {
+    setPageClicked(page);
+    setTogglePage(!togglePage);
+  };
+
+  const pageHandler = () => {
+    setTogglePage(!togglePage);
+  };
+
   const profilecardhandler = () => {
     let element = document.getElementById("profile-container");
     element.classList.toggle("profile-open");
@@ -22,6 +34,9 @@ function Navbar({ onSignout, userinfo, authlogin }) {
 
   return (
     <>
+      {togglePage ? (
+        <Pages pageClicked={pageClicked} pageHandler={pageHandler} />
+      ) : null}
       <div className="nav-container">
         <nav>
           <h2>CryptoMap</h2>
@@ -31,10 +46,27 @@ function Navbar({ onSignout, userinfo, authlogin }) {
               <i className="fas fa-bars"></i>
             </label>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-              <li>Donate</li>
+              <li
+                onClick={() => {
+                  displayPage("about");
+                }}
+              >
+                About
+              </li>
+              <li
+                onClick={() => {
+                  displayPage("contact");
+                }}
+              >
+                Contact
+              </li>
+              <li
+                onClick={() => {
+                  displayPage("donate");
+                }}
+              >
+                Donate
+              </li>
             </ul>
             <div className="profile-pic" onClick={profilecardhandler}>
               {authlogin ? (

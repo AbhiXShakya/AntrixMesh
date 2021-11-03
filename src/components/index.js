@@ -4,3 +4,4 @@ export { Tag } from "./Tag/Tag";
 export { Discussion } from "./Discussion/Discussion";
 export { Pagination } from "./Pagination/Pagination";
 export { TabList } from "./TabList/TabList";
+export { Pages } from "./Pages/Pages";

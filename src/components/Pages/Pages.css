@@ -1,0 +1,40 @@
+.nav-sub-container ul li {
+  cursor: pointer;
+}
+
+.Page {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Pages-header {
+  flex-shrink: 0;
+}
+
+.Pages-header h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.Pages-body {
+  padding: 6px;
+  border-radius: 15px;
+  background-color: #282b30;
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.pagefooter {
+  flex-shrink: 0;
+  height: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
