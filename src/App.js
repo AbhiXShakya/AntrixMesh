@@ -5,7 +5,7 @@ import Navbar from "./components/Header/Navbar";
 import Login from "./components/Login/Login";
 
 function App() {
-  const [authlogin, setauthlogin] = useState(true);
+  const [authlogin, setauthlogin] = useState(false);
   const [userinfo, setuserinfo] = useState({});
 
   const authhandler = (userinfo) => {
