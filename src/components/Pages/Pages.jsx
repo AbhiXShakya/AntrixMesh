@@ -108,7 +108,6 @@ export function Pages({ pageClicked, pageHandler }) {
       </div>
       <Toaster
         toastOptions={{
-          icon: "✔️",
           duration: 1000,
           style: {
             background: "#292929",

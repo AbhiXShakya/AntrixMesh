@@ -108,8 +108,10 @@
 
 @media screen and (max-width: 460px) {
   .copy-address {
-    width: 300px;
+    width: 290px;
     overflow: hidden;
+    font-size: 0.7rem;
+    padding: 0.4rem 0;
   }
 
   .qr-container {
