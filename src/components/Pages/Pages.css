@@ -44,8 +44,8 @@
 .qr-container {
   margin-top: 0rem;
   background-color: white;
-  height: 20rem;
-  width: 20rem;
+  height: 14rem;
+  width: 14rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,7 @@
 }
 
 .coin-name {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   display: flex;
@@ -128,11 +128,11 @@
 }
 
 .donate-tabs button {
-  height: 3.4rem;
+  height: 3rem;
 }
 
 .tab-link img {
-  margin: 8px 0;
+  margin: 0;
   background-color: white;
   padding: 4px;
   border-radius: 50px;

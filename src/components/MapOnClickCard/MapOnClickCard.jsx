@@ -49,15 +49,15 @@ export default function MapOnClickCard({
     let fetchUrl;
 
     if (type === "crypto") {
-      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/rss?type=crypto&${
+      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=crypto&${
         countryCode ? `code=${countryCode}&` : ""
       }&page=${currentCryptoPage}&limit=10`;
     } else if (type === "legal") {
-      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/rss?type=legal&${
+      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=legal&${
         countryCode ? `code=${countryCode}&` : ""
       }&page=${currentLegalPage}&limit=10`;
     } else if (type === "docs") {
-      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/rss?type=govtdocs&${
+      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=govtdocs&${
         countryCode ? `code=${countryCode}&` : ""
       }&page=${currentDocsPage}&limit=10`;
     }

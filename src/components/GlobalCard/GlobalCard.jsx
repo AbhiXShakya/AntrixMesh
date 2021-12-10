@@ -66,19 +66,19 @@ export default function GlobalCard({
     setIsLoading(true);
     let fetchurl;
     if (type === "crypto") {
-      fetchurl = `https://test-backend-4.abhixshakya.repl.co/rss?type=crypto&${
+      fetchurl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=crypto&${
         code ? `code=${code}&` : ""
       }${query ? `query=${query}&` : ""}${toDate ? `toDate=${toDate}&` : ""}${
         fromDate ? `fromDate=${fromDate}&` : ""
       }&page=${currCryptoPage}&limit=10`;
     } else if (type === "legal") {
-      fetchurl = `https://test-backend-4.abhixshakya.repl.co/rss?type=legal&${
+      fetchurl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=legal&${
         code ? `code=${code}&` : ""
       }${query ? `query=${query}&` : ""}${toDate ? `toDate=${toDate}&` : ""}${
         fromDate ? `fromDate=${fromDate}&` : ""
       }&page=${currLegalPage}&limit=10`;
     } else if (type === "docs") {
-      fetchurl = `https://test-backend-4.abhixshakya.repl.co/rss?type=govtdocs&${
+      fetchurl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=govtdocs&${
         code ? `code=${code}&` : ""
       }${query ? `query=${query}&` : ""}${toDate ? `toDate=${toDate}&` : ""}${
         fromDate ? `fromDate=${fromDate}&` : ""

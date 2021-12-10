@@ -47,7 +47,7 @@ export function WorldMap({ authlogin }) {
   const loadheat = (map) => {
     let heatPoints = [];
     axios
-      .get(`https://test-backend-4.abhixshakya.repl.co/rss/country/count`)
+      .get(`https://test-backend-4.abhixshakya.repl.co/api/v1/country/count`)
       .then((res) => {
         for (const [key, value] of Object.entries(res.data.collections)) {
           try {

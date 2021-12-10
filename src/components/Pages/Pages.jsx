@@ -11,19 +11,7 @@ export function Pages({ pageClicked, pageHandler }) {
       title: "About",
       content: (
         <>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-            rerum nisi suscipit deleniti odit vero et in? Blanditiis ea tempora
-            veniam reiciendis voluptate odit ab atque labore voluptatum. Tenetur
-            exercitationem maiores praesentium aperiam modi rem sequi recusandae
-            aut a beatae porro, aspernatur debitis dolor ab dolore magnam! Ea
-            non aut voluptatum quas perferendis animi quaerat minima provident.
-            Placeat reiciendis iste aliquam? Nemo, nam cupiditate? Voluptatem
-            neque eligendi doloremque quasi ab dolore aut amet soluta at.
-            Tempore, nam magnam earum, a expedita debitis magni officia natus
-            deserunt eius facilis maiores similique voluptates culpa repellat
-            itaque eaque temporibus voluptas, id fugit? Placeat?
-          </p>
+          <p>About us</p>
         </>
       ),
     },
@@ -31,19 +19,7 @@ export function Pages({ pageClicked, pageHandler }) {
       title: "Contact",
       content: (
         <>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-            rerum nisi suscipit deleniti odit vero et in? Blanditiis ea tempora
-            veniam reiciendis voluptate odit ab atque labore voluptatum. Tenetur
-            exercitationem maiores praesentium aperiam modi rem sequi recusandae
-            aut a beatae porro, aspernatur debitis dolor ab dolore magnam! Ea
-            non aut voluptatum quas perferendis animi quaerat minima provident.
-            Placeat reiciendis iste aliquam? Nemo, nam cupiditate? Voluptatem
-            neque eligendi doloremque quasi ab dolore aut amet soluta at.
-            Tempore, nam magnam earum, a expedita debitis magni officia natus
-            deserunt eius facilis maiores similique voluptates culpa repellat
-            itaque eaque temporibus voluptas, id fugit? Placeat?
-          </p>
+          <p>Contact us</p>
         </>
       ),
     },
@@ -91,6 +67,29 @@ export function Pages({ pageClicked, pageHandler }) {
                 </p>
               </div>
             </TabContent>
+            <TabContent for="tab2">
+              <div className="coin-name">
+                <p>SOLANA</p>
+              </div>
+              <div className="qr-container">
+                <img
+                  src="https://telegra.ph/file/6b5eaa68891b212bd2a95.jpg"
+                  alt="QR"
+                />
+              </div>
+              <div className="coin-address">
+                <p>Address</p>
+                <p
+                  className="copy-address"
+                  onClick={() => {
+                    copy("8LxXUmV4WczKRJyMXAsaYrYLCGXx94pKE6JqTGgnLk9Y");
+                    toast("Address Copied !!");
+                  }}
+                >
+                  8LxXUmV4WczKRJyMXAsaYrYLCGXx94pKE6JqTGgnLk9Y
+                </p>
+              </div>
+            </TabContent>
           </Tabs>
         </>
       ),
@@ -102,6 +101,14 @@ export function Pages({ pageClicked, pageHandler }) {
       <div className="Page">
         <div className="Pages-header">
           <h1>{pagesData[pageClicked].title}</h1>
+          {pageClicked === "donate" ? (
+            <div className="donate-tabs">
+              <p>
+                If you love our project and would like to contribute to the
+                cause, please donate using
+              </p>
+            </div>
+          ) : null}
         </div>
         <div className="Pages-body">{pagesData[pageClicked].content}</div>
         <div className="pagefooter"></div>
