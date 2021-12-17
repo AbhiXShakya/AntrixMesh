@@ -5,23 +5,23 @@ import Navbar from "./components/Header/Navbar";
 import Login from "./components/Login/Login";
 
 function App() {
-  const [authlogin, setauthlogin] = useState(false);
+  const [authLogin, setAuthLogin] = useState(false);
   const [userinfo, setuserinfo] = useState({});
-  console.log(process.env.BACKEND_URL);
+  console.log(process.env.REACT_APP_BACKEND_URL);
   const authhandler = (userinfo) => {
     setuserinfo(userinfo);
-    setauthlogin(!authlogin);
+    setAuthLogin(!authLogin);
   };
 
   return (
     <>
-      {!authlogin ? <Login onLogin={authhandler} /> : null}
+      {!authLogin ? <Login onLogin={authhandler} /> : null}
       <Navbar
         onSignout={authhandler}
         userinfo={userinfo}
-        authlogin={authlogin}
+        authLogin={authLogin}
       />
-      <WorldMap authlogin={authlogin} />
+      <WorldMap authLogin={authLogin} />
     </>
   );
 }

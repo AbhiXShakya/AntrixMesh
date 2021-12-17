@@ -3,7 +3,6 @@ import "./MapOnClickCard.css";
 import PopCard from "../PopCard/PopCard";
 import { TabLink, TabContent, Tabs } from "react-tabs-redux";
 import axios from "axios";
-import getCountryISO2 from "country-iso-3-to-2";
 import Loader from "../Loader/Loader";
 import { Pagination } from "../Pagination/Pagination";
 
@@ -45,19 +44,19 @@ export default function MapOnClickCard({
   });
 
   const countrySubmit = (type) => {
-    let countryCode = getCountryISO2(mapSelectedCountry.code);
+    let countryCode = mapSelectedCountry.code;
     let fetchUrl;
 
     if (type === "crypto") {
-      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=crypto&${
+      fetchUrl = `${process.env.REACT_APP_BACKEND_URL}?type=crypto&${
         countryCode ? `code=${countryCode}&` : ""
       }&page=${currentCryptoPage}&limit=10`;
     } else if (type === "legal") {
-      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=legal&${
+      fetchUrl = `${process.env.REACT_APP_BACKEND_URL}?type=legal&${
         countryCode ? `code=${countryCode}&` : ""
       }&page=${currentLegalPage}&limit=10`;
     } else if (type === "docs") {
-      fetchUrl = `https://test-backend-4.abhixshakya.repl.co/api/v1?type=govtdocs&${
+      fetchUrl = `${process.env.REACT_APP_BACKEND_URL}?type=govtdocs&${
         countryCode ? `code=${countryCode}&` : ""
       }&page=${currentDocsPage}&limit=10`;
     }

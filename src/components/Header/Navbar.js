@@ -7,7 +7,7 @@ import { Pages } from "../Pages/Pages";
 const clientId =
   "666743102967-humikr8ibktjr2oeeb3pmldbdf9qmvol.apps.googleusercontent.com";
 
-function Navbar({ onSignout, userinfo, authlogin }) {
+function Navbar({ onSignout, userinfo, authLogin }) {
   const [ProfileCard, setProfileCard] = useState(false);
   const [pageClicked, setPageClicked] = useState(undefined);
   const [togglePage, setTogglePage] = useState(false);
@@ -70,7 +70,7 @@ function Navbar({ onSignout, userinfo, authlogin }) {
               </li>
             </ul>
             <div className="profile-pic" onClick={profilecardhandler}>
-              {authlogin ? (
+              {authLogin ? (
                 <img src={userinfo && userinfo.imageUrl} alt=""></img>
               ) : (
                 <i className="far fa-user"></i>

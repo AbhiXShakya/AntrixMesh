@@ -6,7 +6,11 @@ function CircularButton({ toggleGlobalCard, toggleDiscusionHandler }) {
   return (
     <>
       <div className="circle-div">
-        <a href="https://discord.gg/MNbEvvPG" rel="noreferrer" target="_blank">
+        <a
+          href="https://discord.gg/446yHjeMF2"
+          rel="noreferrer"
+          target="_blank"
+        >
           <div
             className="circle-btn-diss"
             style={{

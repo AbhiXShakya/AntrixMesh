@@ -9,6 +9,7 @@ import n from "country-js";
 import MapOnClickCard from "../MapOnClickCard/MapOnClickCard";
 import GlobalCard from "../GlobalCard/GlobalCard";
 import CircularButton from "../CircularButton/CircularButton";
+import getCountryISO2 from "country-iso-3-to-2";
 
 let cfg = {
   radius: 6,
@@ -20,7 +21,7 @@ let cfg = {
   valueField: "count",
 };
 
-export function WorldMap({ authlogin }) {
+export function WorldMap({ authLogin }) {
   const initialState = {
     name: "global",
     code: undefined,
@@ -47,17 +48,20 @@ export function WorldMap({ authlogin }) {
   const loadheat = (map) => {
     let heatPoints = [];
     axios
-      .get(`https://test-backend-4.abhixshakya.repl.co/api/v1/country/count`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/country/count`)
       .then((res) => {
         for (const [key, value] of Object.entries(res.data.collections)) {
           try {
-            let ltng = n.search(key)[0].geo;
+            const countryISO2 = getCountryISO2(key);
+            let ltng = n.search(countryISO2)[0].geo;
             heatPoints.push({
               lat: ltng?.latitude,
               lng: ltng?.longitude,
               count: value,
             });
-          } catch (err) {}
+          } catch (err) {
+            console.log(err);
+          }
         }
         let testData = {
           max: 10,
@@ -104,7 +108,10 @@ export function WorldMap({ authlogin }) {
         countryData = crg
           .country_reverse_geocoding()
           .get_country(e.latlng.lat, e.latlng.lng);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
+
       if (countryData && countryData?.name && countryData?.code) {
         setMapSelectedCountry(countryData);
         toggleMapOnClick();
