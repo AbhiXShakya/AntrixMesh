@@ -85,19 +85,16 @@ export default function GlobalCard({
       }&page=${currDocsPage}&limit=10`;
     }
 
-    axios
-      .get(fetchurl)
-      .then((res) => {
-        type === "crypto"
-          ? setGetCryptoFilterObj(res.data)
-          : type === "legal"
-          ? setGetLegalFilterObj(res.data)
-          : setGetDocsFilterObj(res.data);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 900);
-      })
-      .catch((error) => console.log(error));
+    axios.get(fetchurl).then((res) => {
+      type === "crypto"
+        ? setGetCryptoFilterObj(res.data)
+        : type === "legal"
+        ? setGetLegalFilterObj(res.data)
+        : setGetDocsFilterObj(res.data);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 900);
+    });
   };
 
   useEffect(() => {
@@ -159,7 +156,7 @@ export default function GlobalCard({
           />
         </div>
         <input
-          autocomplete="off"
+          autoComplete="off"
           type="text"
           id="header-search"
           placeholder="Search"

@@ -7,7 +7,6 @@ import Login from "./components/Login/Login";
 function App() {
   const [authLogin, setAuthLogin] = useState(false);
   const [userinfo, setuserinfo] = useState({});
-  console.log(process.env.REACT_APP_BACKEND_URL);
   const authhandler = (userinfo) => {
     setuserinfo(userinfo);
     setAuthLogin(!authLogin);

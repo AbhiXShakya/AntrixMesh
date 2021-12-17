@@ -34,12 +34,12 @@ export function WorldMap({ authLogin }) {
   const [mapSelectedCountry, setMapSelectedCountry] = useState();
   const [mapOnClick, setMapOnClick] = useState(false);
   const [globalCard, setGlobalCard] = useState(false);
+
   const toggleMapOnClick = () => {
-    if (authLogin) {
-      setMapOnClick(!mapOnClick);
-    }
+    setMapOnClick(!mapOnClick);
   };
   const toggleGlobalCard = () => {
+    console.log(authLogin);
     if (authLogin) {
       setGlobalCard(!globalCard);
     }
@@ -64,7 +64,7 @@ export function WorldMap({ authLogin }) {
               count: value,
             });
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         }
         let testData = {
@@ -113,7 +113,7 @@ export function WorldMap({ authLogin }) {
           .country_reverse_geocoding()
           .get_country(e.latlng.lat, e.latlng.lng);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
 
       if (countryData && countryData?.name && countryData?.code) {
@@ -138,7 +138,7 @@ export function WorldMap({ authLogin }) {
         toggleDiscusionHandler={toggleDiscusionHandler}
         toggleGlobalCard={toggleGlobalCard}
       />
-      {mapOnClick ? (
+      {mapOnClick & authLogin ? (
         <MapOnClickCard
           toggleMapOnClick={toggleMapOnClick}
           mapSelectedCountry={mapSelectedCountry}

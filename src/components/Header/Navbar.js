@@ -39,7 +39,7 @@ function Navbar({ onSignout, userinfo, authLogin }) {
         onSignout();
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         alert("Not able to signout");
       });
   };

@@ -94,3 +94,8 @@ p {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 }
+
+.signin-btn button:hover,
+.signin-btn button:focus {
+  background-color: #4d58d8;
+}

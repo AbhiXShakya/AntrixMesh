@@ -35,8 +35,7 @@ function CryptoBanner() {
       )
       .then((res) => {
         setcoins(res.data);
-      })
-      .catch((error) => console.log(error));
+      });
   }, []);
 
   return (

@@ -14,10 +14,10 @@ function Login({ onLogin }) {
       signInWithPopup(fireAuth, provider)
         .then((res) => {
           onLogin(res.user);
-          console.log(res.user);
+          // console.log(res.user);
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
         });
     };
     await res(provider);

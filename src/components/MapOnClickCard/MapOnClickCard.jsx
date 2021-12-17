@@ -61,21 +61,18 @@ export default function MapOnClickCard({
       }&page=${currentDocsPage}&limit=10`;
     }
 
-    axios
-      .get(fetchUrl)
-      .then((res) => {
-        if (type === "crypto") {
-          setGetCryptoCountryObj(res.data);
-        } else if (type === "legal") {
-          setGetLegalCountryObj(res.data);
-        } else if (type === "docs") {
-          setGetDocsCountryObj(res.data);
-        }
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 900);
-      })
-      .catch((error) => console.log(error));
+    axios.get(fetchUrl).then((res) => {
+      if (type === "crypto") {
+        setGetCryptoCountryObj(res.data);
+      } else if (type === "legal") {
+        setGetLegalCountryObj(res.data);
+      } else if (type === "docs") {
+        setGetDocsCountryObj(res.data);
+      }
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 900);
+    });
   };
 
   useEffect(() => {
