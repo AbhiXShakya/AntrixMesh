@@ -7,6 +7,7 @@ import SelectCountry from "./SelectCountry/SelectCountry";
 import { TabLink, TabContent, Tabs } from "react-tabs-redux";
 import Loader from "../Loader/Loader";
 import { Pagination } from "../Pagination/Pagination";
+import getCountryISO3 from "country-iso-2-to-3";
 
 export default function GlobalCard({
   toggleGlobalCard,
@@ -21,9 +22,9 @@ export default function GlobalCard({
   const [getCryptoFilterObj, setGetCryptoFilterObj] = useState({});
   const [getLegalFilterObj, setGetLegalFilterObj] = useState({});
   const [getDocsFilterObj, setGetDocsFilterObj] = useState({});
-  const [toDate, setToDate] = React.useState(undefined);
-  const [fromDate, setFromDate] = React.useState(undefined);
-  const [query, setQuery] = React.useState(undefined);
+  const [toDate, setToDate] = useState(undefined);
+  const [fromDate, setFromDate] = useState(undefined);
+  const [query, setQuery] = useState(undefined);
   const [isSelectCountryModal, setIsSelectCountryModal] = useState(false);
   const [currCryptoPage, setCurrCryptoPage] = useState(1);
   const [currLegalPage, setCurrLegalPage] = useState(1);
@@ -64,6 +65,7 @@ export default function GlobalCard({
   let code = selectedCountry?.code;
   const submit = (type) => {
     setIsLoading(true);
+    code = getCountryISO3(code);
     let fetchurl;
     if (type === "crypto") {
       fetchurl = `${process.env.REACT_APP_BACKEND_URL}?type=crypto&${
@@ -84,6 +86,8 @@ export default function GlobalCard({
         fromDate ? `fromDate=${fromDate}&` : ""
       }&page=${currDocsPage}&limit=10`;
     }
+
+    console.log(fetchurl);
 
     axios.get(fetchurl).then((res) => {
       type === "crypto"
