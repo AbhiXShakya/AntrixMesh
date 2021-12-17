@@ -188,7 +188,7 @@ nav li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(36, 36, 36, 0.753);
+  background-color: rgba(0, 0, 0, 0.349);
   backdrop-filter: blur(10px);
   z-index: 2;
 }
@@ -207,8 +207,9 @@ nav li {
   justify-content: center;
   padding-top: 3rem !important;
   padding: 4rem;
-  background-color: white;
+  background-color: #2c2f33;
   z-index: 3;
+  color: white;
 }
 
 .profile-picture img {
@@ -229,6 +230,8 @@ nav li {
   right: 0.8rem;
   padding: 5px 7px;
   cursor: pointer;
+  color: #5865f2;
+  font-size: 20px;
 }
 
 @media (max-width: 500px) {
@@ -246,4 +249,20 @@ nav li {
     margin-top: 3px;
     font-size: 12px;
   }
+}
+
+.signout-btn {
+  background-color: #4e22b5;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }

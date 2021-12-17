@@ -1,19 +1,26 @@
-import { GoogleLogin } from "react-google-login";
 import "./Login.css";
-import FacebookLogin from "react-facebook-login";
-
-const clientId =
-  "666743102967-humikr8ibktjr2oeeb3pmldbdf9qmvol.apps.googleusercontent.com";
+import {
+  facebookProvider,
+  googleProvider,
+  twitterProvider,
+} from "./socialProviders";
+import { signInWithPopup } from "firebase/auth";
+import { fireAuth } from "./firebaseConfig";
+import { GrFacebookOption, GrGoogle, GrTwitter } from "react-icons/gr";
 
 function Login({ onLogin }) {
-  const onLoginSuccess = (res) => {
-    onLogin(res.profileObj);
-  };
-
-  const onLoginFailure = (res) => {};
-
-  const responseFacebook = (response) => {
-    console.log(response);
+  const handleLoginClick = async (provider) => {
+    const res = (provider) => {
+      signInWithPopup(fireAuth, provider)
+        .then((res) => {
+          onLogin(res.user);
+          console.log(res.user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    await res(provider);
   };
 
   return (
@@ -25,25 +32,30 @@ function Login({ onLogin }) {
           have a great learning attitude. And hear that you fit the bill
           perfectly. It's great to have you with us. Warmest welcome!
         </p>
+        <p className="cont-with">Continue with</p>
         <div className="signin-btn">
-          <GoogleLogin
-            clientId={clientId}
-            buttonText="Sign In"
-            onSuccess={onLoginSuccess}
-            onFailure={onLoginFailure}
-            cookiePolicy={"single_host_origin"}
-            isSignedIn={true}
-          />
-          <FacebookLogin
-            appId="447758823413237"
-            autoLoad={true}
-            fields="name,email,picture"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log("clicked", e.target.value);
+          <button
+            onClick={() => {
+              handleLoginClick(googleProvider);
             }}
-            callback={responseFacebook}
-          />
+          >
+            <GrGoogle />
+          </button>
+          <button
+            onClick={() => {
+              handleLoginClick(facebookProvider);
+            }}
+          >
+            <GrFacebookOption />
+          </button>
+
+          <button
+            onClick={() => {
+              handleLoginClick(twitterProvider);
+            }}
+          >
+            <GrTwitter />
+          </button>
         </div>
       </div>
     </div>

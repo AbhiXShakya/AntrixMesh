@@ -35,10 +35,14 @@ export function WorldMap({ authLogin }) {
   const [mapOnClick, setMapOnClick] = useState(false);
   const [globalCard, setGlobalCard] = useState(false);
   const toggleMapOnClick = () => {
-    setMapOnClick(!mapOnClick);
+    if (authLogin) {
+      setMapOnClick(!mapOnClick);
+    }
   };
   const toggleGlobalCard = () => {
-    setGlobalCard(!globalCard);
+    if (authLogin) {
+      setGlobalCard(!globalCard);
+    }
   };
 
   const toggleDiscusionHandler = () => {
