@@ -7,7 +7,7 @@ function CircularButton({ toggleGlobalCard, toggleDiscusionHandler }) {
     <>
       <div className="circle-div">
         <a
-          href="https://discord.gg/446yHjeMF2"
+          href="https://discord.gg/5jq4UXYyp3"
           rel="noreferrer"
           target="_blank"
         >
