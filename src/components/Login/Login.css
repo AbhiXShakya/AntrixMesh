@@ -21,7 +21,7 @@
   color: white;
 }
 
-p {
+.card p {
   margin: 1rem 0 1.5rem 0;
   text-align: center;
 }

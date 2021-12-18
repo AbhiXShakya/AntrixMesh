@@ -19,6 +19,7 @@
 }
 
 .Pages-body {
+  text-align: left;
   padding: 6px;
   border-radius: 15px;
   background-color: #282b30;
@@ -140,4 +141,13 @@
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
+}
+
+.Pages-body p {
+  margin: 20px 0;
+}
+
+.Pages-body h2 {
+  margin-top: 35px;
+  text-align: center;
 }
