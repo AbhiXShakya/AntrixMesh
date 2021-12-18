@@ -11,7 +11,30 @@ export function Pages({ pageClicked, pageHandler }) {
       title: "About",
       content: (
         <>
-          <p>About us</p>
+          <p>
+            At AntrixMesh, we are building a virtual assets news and research
+            facilitation platform. Our objective is to provide the global
+            community access to all news, data and research under one
+            comprehensive platform. We have also collaborated with CapturLAW who
+            will provide our users legal research and government documents on
+            virtual assets in different jurisdictions. Our global community
+            members should be well versed with local laws and make informed
+            decisions when investing. The expenses incurred in development and
+            maintenance of this platform and the research conducted, are all
+            paid by a non-profit organization called World FuturTech Alliance
+            Foundation. If you would like to make a donation, please visit our
+            Donate page. What's ahead? We want AntrixMesh to transform into a
+            Decentralised Autonomous Organization (DAO).
+          </p>
+          <p>
+            AntrixMesh will be a community driven project. Lawyers, policy
+            researchers, industry experts can publish there research work and
+            the community members will reward them for the value their research
+            generates. This DAO will become the voice of the people in virtual
+            assets economy and work with governments around the world to bring
+            positive and supportive legislation. To discuss more on this, please
+            join our Discord Channel here.
+          </p>
         </>
       ),
     },
@@ -19,7 +42,7 @@ export function Pages({ pageClicked, pageHandler }) {
       title: "Contact",
       content: (
         <>
-          <p>Contact us</p>
+          <p>Contact us through Mail : AntrixMesh@gmail.com</p>
         </>
       ),
     },

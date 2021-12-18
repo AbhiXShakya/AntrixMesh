@@ -27,11 +27,7 @@ function Login({ onLogin }) {
     <div className="container">
       <div className="card">
         <h3>Welcome!</h3>
-        <p>
-          We love to form a team, work with enthusiastic, creative people, and
-          have a great learning attitude. And hear that you fit the bill
-          perfectly. It's great to have you with us. Warmest welcome!
-        </p>
+        <p>Welcome to AntrixMesh</p>
         <p className="cont-with">Continue with</p>
         <div className="signin-btn">
           <button
