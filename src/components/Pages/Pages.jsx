@@ -52,7 +52,7 @@ export function Pages({ pageClicked, pageHandler }) {
       content: (
         <>
           <center>
-            <p>Contact us through Mail : AntrixMesh@gmail.com</p>
+            <p>Email : AntrixMesh@gmail.com</p>
           </center>
         </>
       ),
