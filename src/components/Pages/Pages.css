@@ -147,6 +147,11 @@
   margin: 20px 0;
 }
 
+.Pages-body a {
+  color: #6572fd;
+  text-decoration: none;
+}
+
 .Pages-body h2 {
   margin-top: 35px;
   text-align: center;

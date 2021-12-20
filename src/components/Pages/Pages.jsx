@@ -21,13 +21,12 @@ export function Pages({ pageClicked, pageHandler }) {
               users legal research and government documents on virtual assets in
               different jurisdictions. Our global community members should be
               well versed with local laws and make informed decisions when
-              investing.{" "}
+              investing.
             </p>
             <p>
               The expenses incurred in development and maintenance of this
               platform and the research conducted, are all paid by a non-profit
-              organization called World FuturTech Alliance Foundation. If you
-              would like to make a donation, please visit our Donate page.
+              organization called World FutureTech Alliance Foundation.
             </p>
             <h2>What's ahead? </h2>
             <p>
@@ -42,7 +41,8 @@ export function Pages({ pageClicked, pageHandler }) {
             generates. This DAO will become the voice of the people in virtual
             assets economy and work with governments around the world to bring
             positive and supportive legislation. To discuss more on this, please
-            join our Discord Channel here.
+            join our <a href="https://discord.gg/5jq4UXYyp3">Discord Channel</a>
+            .
           </p>
         </>
       ),
@@ -51,7 +51,9 @@ export function Pages({ pageClicked, pageHandler }) {
       title: "Contact",
       content: (
         <>
-          <p>Contact us through Mail : AntrixMesh@gmail.com</p>
+          <center>
+            <p>Contact us through Mail : AntrixMesh@gmail.com</p>
+          </center>
         </>
       ),
     },
@@ -78,7 +80,7 @@ export function Pages({ pageClicked, pageHandler }) {
             </div>
             <TabContent for="tab1">
               <div className="coin-name">
-                <p>ETH and any ETH based token (ERC20, 721, and more)</p>
+                <p>ETH or ETH based token (ERC20, 721, and more)</p>
               </div>
               <div className="qr-container">
                 <img
@@ -137,7 +139,7 @@ export function Pages({ pageClicked, pageHandler }) {
             <div className="donate-tabs">
               <p>
                 If you love our project and would like to contribute to the
-                cause, please donate using
+                cause, please donate:
               </p>
             </div>
           ) : null}
