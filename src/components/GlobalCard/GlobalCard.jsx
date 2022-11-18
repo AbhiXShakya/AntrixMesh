@@ -17,7 +17,7 @@ export default function GlobalCard({
   isLoading,
 }) {
   const [countryIcon, setCountryIcon] = useState(
-    "https://telegra.ph/file/3459cff6cc24335197457.png"
+    "https://graph.org/file/3459cff6cc24335197457.png"
   );
   const [getCryptoFilterObj, setGetCryptoFilterObj] = useState({});
   const [getLegalFilterObj, setGetLegalFilterObj] = useState({});
@@ -248,7 +248,10 @@ export default function GlobalCard({
                                 className="result-icon"
                                 src={
                                   e.linkIcon
-                                    ? e.linkIcon
+                                    ? e.linkIcon.replace(
+                                        "telegra.ph",
+                                        "graph.org"
+                                      )
                                     : "https://cointelegraph.com/favicon.ico"
                                 }
                                 loading="lazy"
@@ -303,7 +306,10 @@ export default function GlobalCard({
                                 className="result-icon"
                                 src={
                                   e.linkIcon
-                                    ? e.linkIcon
+                                    ? e.linkIcon.replace(
+                                        "telegra.ph",
+                                        "graph.org"
+                                      )
                                     : "https://cointelegraph.com/favicon.ico"
                                 }
                                 loading="lazy"
@@ -358,7 +364,10 @@ export default function GlobalCard({
                                 className="result-icon"
                                 src={
                                   e.linkIcon
-                                    ? e.linkIcon
+                                    ? e.linkIcon.replace(
+                                        "telegra.ph",
+                                        "graph.org"
+                                      )
                                     : "https://cointelegraph.com/favicon.ico"
                                 }
                                 loading="lazy"

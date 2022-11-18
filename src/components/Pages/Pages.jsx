@@ -65,14 +65,14 @@ export function Pages({ pageClicked, pageHandler }) {
             <div className="donate-tabs">
               <TabLink to="tab1">
                 <img
-                  src="https://telegra.ph/file/83fbe7de11ee05a5159f4.png"
+                  src="https://graph.org/file/83fbe7de11ee05a5159f4.png"
                   alt="ETH"
                   width="34"
                 />
               </TabLink>
               <TabLink to="tab2">
                 <img
-                  src="https://telegra.ph/file/dcba5bd3a0fa05e7b962d.png"
+                  src="https://graph.org/file/dcba5bd3a0fa05e7b962d.png"
                   alt="SOL"
                   width="34"
                 />
@@ -84,7 +84,7 @@ export function Pages({ pageClicked, pageHandler }) {
               </div>
               <div className="qr-container">
                 <img
-                  src="https://telegra.ph/file/a21fbace7db9f34acde61.jpg"
+                  src="https://graph.org/file/a21fbace7db9f34acde61.jpg"
                   alt="QR"
                 />
               </div>
@@ -107,7 +107,7 @@ export function Pages({ pageClicked, pageHandler }) {
               </div>
               <div className="qr-container">
                 <img
-                  src="https://telegra.ph/file/6b5eaa68891b212bd2a95.jpg"
+                  src="https://graph.org/file/6b5eaa68891b212bd2a95.jpg"
                   alt="QR"
                 />
               </div>

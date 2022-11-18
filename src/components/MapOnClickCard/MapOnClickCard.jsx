@@ -147,7 +147,10 @@ export default function MapOnClickCard({
                                   className="result-icon"
                                   src={
                                     e.linkIcon
-                                      ? e.linkIcon
+                                      ? e.linkIcon.replace(
+                                          "telegra.ph",
+                                          "graph.org"
+                                        )
                                       : "https://cointelegraph.com/favicon.ico"
                                   }
                                   loading="lazy"
@@ -201,7 +204,10 @@ export default function MapOnClickCard({
                                   className="result-icon"
                                   src={
                                     e.linkIcon
-                                      ? e.linkIcon
+                                      ? e.linkIcon.replace(
+                                          "telegra.ph",
+                                          "graph.org"
+                                        )
                                       : "https://cointelegraph.com/favicon.ico"
                                   }
                                   loading="lazy"
@@ -255,7 +261,10 @@ export default function MapOnClickCard({
                                   className="result-icon"
                                   src={
                                     e.linkIcon
-                                      ? e.linkIcon
+                                      ? e.linkIcon.replace(
+                                          "telegra.ph",
+                                          "graph.org"
+                                        )
                                       : "https://cointelegraph.com/favicon.ico"
                                   }
                                   loading="lazy"

@@ -16,7 +16,7 @@ export default function SelectCountry({
     }
     setSelectedCountry({ name: option.label, code: countryCode });
     if (option.code === "global") {
-      setCountryIcon("https://telegra.ph/file/3459cff6cc24335197457.png");
+      setCountryIcon("https://graph.org/file/3459cff6cc24335197457.png");
     } else {
       setCountryIcon(
         `https://flagcdn.com/w20/${option.code.toLowerCase()}.png`
@@ -46,7 +46,7 @@ export default function SelectCountry({
                       <img
                         className="global-icon"
                         loading="lazy"
-                        src="https://telegra.ph/file/3459cff6cc24335197457.png"
+                        src="https://graph.org/file/3459cff6cc24335197457.png"
                         alt=""
                       />{" "}
                       <span style={{ marginLeft: "1.82rem" }}>Global</span>
